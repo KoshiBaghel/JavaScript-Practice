@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript Basic
+        </title>
+        <script type="text/Javascript">
+
+            let a = 10;
+            let b = 20;
+
+            // 1. Dono numbers ka sum print karo.
+            console.log(a+b);
+
+            // 2. a ki value 15 kar do.
+            a = 15;
+            console.log(a);
+
+            // 3. a aur b ko print karo.
+            console.log(a);
+            console.log(b);
+
+        // Agar marks 33 ya usse zyada hain "Pass" print karo Warna "Fail" print karo -
+
+            let marks = 75;
+            if (marks >= 33) {
+                console.log("Pass");
+            } else{
+                console.log("Fail");
+            }
+        
+        // Grade Question Based on marks -
+            
+            let mark = 51;
+            if (mark >= 90) {
+                console.log("A Grade");
+            } else if (mark >= 75) {
+                console.log("B Grade");
+            } else if(mark >= 50) {
+                console.log("C Grade");
+            } else if(mark >= 33) {
+                console.log("D Grade");
+            } else{
+                console.log("Fail");
+            }
+        
+        // Even and odd -
+
+            let number = 30;
+            if (number % 2 === 0) {
+                console.log(number + " is a even number");
+            } else {
+                console.log(number + " is a odd number");
+            }
+        
+        //  For loop -
+
+            for (let i = 1; i <= 10; i++) {
+                console.log(i);
+            }
+            for (let r = 10; r >= 1; r--) {
+                console.log(r);
+            }
+            for (let e = 2; e <= 20; e += 2){
+                console.log(e);
+            }
+            let t = 7;
+            for( let num = 1; num <= 10; num++){
+                console.log(t +' * '+ num , ' = ', t * num );
+            }
+            let sum = 0;
+            for (let s = 1; s <= 10; s++){
+                sum = sum + s;
+            }
+            console.log("Sum = ", sum);
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
