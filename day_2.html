@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            For Loop
+        </title>
+        <script type="text/Javascript">
+
+            for( let i = 1; i <= 50; i++){
+                console.log(i);
+            }
+            // Odd number print - 
+            for( let i = 1; i <= 20; i += 2){
+                console.log(i);
+            }
+            // Multification of 5 -
+            let t = 5;
+            for( let i = 1; i <= 10; i++){
+                console.log(t*i);
+            }
+            // Sum number 1 to 10 -
+            let Sum = 0;
+            for( let a = 1; a <= 10; a++){
+                Sum = Sum + a;
+            }
+            console.log('Sum = '+ Sum);
+            
+            // Divied by 3 code 
+            for ( let i = 3; i <= 100; i += 3){
+               console.log(i);
+            }
+            // Second method -
+            for ( let i = 1; i <= 100; i++){
+                if (i % 3 === 0) {
+                    console.log(i);
+                }
+            }
+            // Sum number 1 to 20 only even number -
+            let sum1 = 0;
+            for( let a = 1; a <= 20; a++){
+                if ( a % 2 === 0){
+                   sum1 = sum1 + a;
+                }
+            }
+            console.log('Sum = '+ sum1);
+            // Second method -
+            let sum2 = 0;
+            for( let a = 2; a <= 20; a += 2){
+                   sum2 = sum2 + a;
+                }
+            console.log('Sum = '+ sum2);
+            
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
