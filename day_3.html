@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Condition and Loop Mix
+        </title>
+        <script type="text/Javascript">
+
+            // Sum of 1 to 50 condition divided by 5 only print - 
+            let sum = 0;
+            for (let i = 1; i <= 50; i++) {
+                if( i % 5 === 0){
+                    sum = sum + i;
+                }   
+            }
+            console.log("Total of : ", sum);
+
+            // Sum of 1 to 100 condition Even and Odd print -
+            let even_num = 0;
+            let odd_num = 0;
+            for (let i = 1; i <= 100; i++) {
+                if( i % 2 === 0){
+                    even_num = even_num + i;
+                } else {
+                    odd_num = odd_num + i;
+                }
+            }
+            console.log("Even number sum = " , even_num);
+            console.log("Odd number sum = " , odd_num);
+
+            // Sum of 1 to 100 condition divided by 5 , 3 print - 
+            let s = 0;
+            for (let i = 1; i <= 100; i++) {
+                if( i % 5 === 0 && i % 3 === 0){
+                  s = s + 1;  
+                }   
+            }
+            console.log("Count is : ", s);
+
+            // Sum of 1 to 100 condition divided by 3 not 5 print - 
+            let t = 0;
+            for (let i = 1; i <= 100; i++) {
+                if( i % 3 === 0 && i % 5 !== 0){
+                  t = t + i;  
+                }   
+            }
+            console.log("Count is : ", t);  
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
