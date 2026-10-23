@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Condition and While Loop 
+        </title>
+        <script type="text/Javascript">
+
+        // Even or Odd count number between 1 to 100 -
+            let c_e = 0;
+            let c_o = 0;
+            for (let i = 1; i <= 100; i++){
+                if (i % 2 === 0){
+                    c_e = c_e + 1;
+                } else{
+                    c_o = c_o + 1;
+                }
+            }
+            console.log("Even Count = ", c_e);
+            console.log("Odd Count = ", c_o);
+
+        // Sum of 1 to 100 divisible by 4 -
+            let s = 0;
+            for (let i = 1; i <= 100; i++){
+                if (i % 4 === 0){
+                    s = s + i;
+                }
+            } 
+            console.log("Sum of = ", s);
+        
+        // Sum and Count of 1 to 100 divisible by 3 and 5 -
+            let a = 0;
+            let b = 0;
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0){
+                    a = a + i;
+                    b = b + 1;
+                }
+            }
+            console.log("Sum of = ", a);
+            console.log("Count of = ", b);
+
+        // While Loop -
+            let i = 1;
+            while (i <= 10){
+                console.log(i);
+                i++;
+            }
+
+            let x = 2;
+            while (x <= 20){
+                console.log(x);
+                x += 2;
+            }
+
+            let y = 10;
+            while (y >= 1) {
+                console.log(y);
+                y--;
+            }
+            
+            let z = 1;
+            while (z <= 20){
+                console.log(z);
+                z += 2;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
