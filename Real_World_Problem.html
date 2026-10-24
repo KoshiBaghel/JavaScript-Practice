@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Test for Loop 
+        </title>
+        <script type="text/Javascript">
+
+        // Shopping Bill Calculator
+            let prices = [120, 250, 80, 300, 150];
+            let total = 0;
+            for (let i = 0; i < prices.length; i++) {
+                // Condition Part may be used - 
+                if( prices[i] >= 200){
+                    total = total + prices[i]; 
+                } 
+            }
+            console.log("Total Shopping bill = ", total);
+
+        // Student Marks Calculator
+            let marks = [65, 80, 45, 90, 70];
+            let result = 0;
+            for (let i = 0; i < marks.length; i++) {
+                result = result + marks[i];
+            }
+            console.log("Student Result = " , result);
+            
+        // ATM Withdrawal Counter
+            let withdrawals = [500, 1000, 700];
+            let balance = 5000;
+            for (let i = 0; i < withdrawals.length; i++) {
+                balance = balance - withdrawals[i];
+            }
+            console.log("Expected balance = " , balance);
+            
+        // Loop based question -
+            let num = 0;
+            while (num <= 20) {
+                if(num % 3 === 0 && num %5 !== 0){
+                    console.log(num);
+                }
+                num ++;
+            } 
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
