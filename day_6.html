@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Do While Loop 
+        </title>
+        <script type="text/Javascript">
+        // Print number 1 to 10 -
+            let i = 1;
+            do{
+                console.log(i);
+                i++;
+            }
+            while(i <= 10); 
+
+        // Print reverse number 10 to 1 -
+            let r = 10;
+            do{
+                console.log(r);
+                r--;
+            }
+            while(r >= 1);
+
+        // Print even number 1 to 20 -
+            let e = 2;
+            do{
+                console.log(e);
+                e += 2;
+            }
+            while(e <= 20);
+
+        // Print odd number 1 to 20 -
+            let o = 1;
+            do{
+                console.log(o);
+                o += 2;
+            }
+            while(o <= 20);
+
+        // Table of 7 -
+            let t = 7;
+            let m = 1;
+            do{
+                console.log(t+" * "+m+ " = "+ t*m);
+                m++;
+            }
+            while(m <= 10);
+
+        // Sum of 1 to 10 numbers -
+            let s = 1;
+            let sum = 0;
+            do{
+                sum = sum + s;
+                s++;
+            }while(s <= 10);
+            console.log("Sum = " ,sum);
+
+        // Multiple of 3 between 1 to 30 -
+            let mul = 3;
+            do{
+                console.log(mul);
+                mul += 3;
+            }
+            while(mul <= 30);
+
+        // Print reverse number 20 to 1 then print finish -
+            let r_c = 20;
+            do{
+                console.log(r_c);
+                r_c--;
+            }while(r_c >= 1);
+            console.log("Finish");
+
+        // Count number 1 to 50 divisible by 5 -
+            let d = 1;
+            let count = 0;
+            do{
+                if (d % 5 === 0){
+                    count = count + 1;
+                }
+                d++;
+            }while(d <= 50);
+            console.log("Count = ",count); 
+        
+        // Sum of even number 1 to 20 -
+            let e_num = 1;
+            let sum_num = 0;
+            do{
+                if (e_num % 2 === 0){
+                    sum_num = sum_num + e_num;
+                }
+                e_num++;
+            }while(e_num <= 20);
+            console.log("Sum = ", sum_num);
+
+        // Count number 1 to 100 divisible by 3 but no divisible by 5 -
+            let di = 1;
+            let count_d = 0;
+            do{
+                if (di % 3 === 0 && di % 5 !== 0){
+                    count_d++;
+                }
+                di++;
+            }while(di <= 100);
+            console.log("Count = ",count_d);
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
