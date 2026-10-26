@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Function
+        </title>
+        <script type="text/Javascript">
+        // Square Function -
+            function square(a) {
+                console.log(a*a);
+            }
+            square(5);
+
+        // Add function with Return -
+            function add(a,b) {
+               return a + b; 
+            }
+            let add_number = add(10,20);
+            console.log(add_number);
+
+        // Multiply using Arrow function - 
+            const multiply = (a,b) => {
+                return a*b;
+            };
+            console.log(multiply(10,4));
+
+        // Subtract using Arrow function - 
+            const sub = (a,b) => {
+                return a - b;
+            };
+            console.log(sub(15,6));
+
+        // Check Even or Odd number -
+            function check(num) {
+               if(num % 2 === 0){
+                    console.log("Even Number");
+               }else{
+                    console.log("Odd Number");
+               } 
+            }
+            check(20);
+
+        // Find Maximum Number - 
+            function findMax(a,b,c) {
+                if(a>=b && a>=c){
+                    console.log(a + " is maximum number");
+                }else if(b>=a && b>=c){
+                    console.log(b + " is maximum number");
+                }else{
+                    console.log(c + " is maximum number");
+                }
+            }
+            findMax(2,20,12);
+
+        // Calculate total number -
+            function total(a,b,c) {
+                return a + b + c;
+            }
+            console.log(total(75, 80, 65));
+
+        // Percentage Calculator - 
+            function percentage(obtained, total) {
+                return (obtained/total)*100;
+            }
+            console.log(percentage(450 , 500)+" %");
+
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
