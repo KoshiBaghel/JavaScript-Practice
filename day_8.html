@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Array
+        </title>
+        <script type="text/Javascript"> 
+            let colour = ["blue","red","green","black"];
+            console.log("First colour = ",colour[0]);
+            console.log("Third colour = ",colour[2]);
+
+            let numbers = [10, 20, 30, 40, 50];
+            console.log("Third number = ",numbers[2]);
+
+            let fruits = ["apple","banana","papaya","orange"];
+            fruits.push("mango");
+            console.log(fruits);
+
+            numbers.pop();
+            console.log(numbers);
+
+            console.log("Length = " ,colour.length);
+
+        // Array and Loop -
+            let number = [12, 25, 38, 41, 56];
+            for(let i = 0; i < number.length; i++){
+                console.log(number[i]);
+            }
+
+        // let number = [12, 25, 38, 41, 56];  same array ka sum  and average -
+            let sum = 0;
+            let avg = 0;
+            for(let i = 0; i < number.length; i++){
+                sum = sum + number[i];
+                avg = (sum / 5);
+            }
+            console.log("Sum of array = ",sum);
+            console.log("Average of array = ",avg);
+
+        // Even number are print in this array - 
+            for(let i = 0; i < number.length; i++){
+                if(number[i] % 2 === 0){
+                    console.log(number[i]);
+                }   
+            }
+
+        // forEach method -
+            let marks = [75, 82, 90, 68, 95];
+            marks.forEach(function(m){
+                console.log(m);
+            });
+
+            console.log("----------");
+
+        // Practices Question -
+            let n = [12, 45, 23, 67, 34, 10];
+            for(let i = 0; i < n.length; i++){
+                if(n[i] >= 30){
+                    console.log(n[i]);
+                }
+            }
+
+            let nums = [12, 7, 18, 5, 9, 24, 40];
+            let evencount = 0;
+            let oddcount = 0;
+            for(let i = 0; i < nums.length; i++){
+                if(nums[i] % 2 === 0){
+                    evencount++;   
+                }else {
+                    oddcount++;
+                }
+            }
+            console.log("Even Count = ", evencount);
+            console.log("Odd Count = ", oddcount);
+
+            let values = [34, 78, 12, 91, 43, 61];
+            console.log(Math.max(...values));
+
+            let items = [10, 20, 30, 40, 50];
+            items.reverse();
+            console.log(items);
+
+            let arr = [3, 7, 9, 12, 14, 18, 20, 21];
+            let total = 0;
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] % 3 === 0){
+                    total = total + arr[i];
+                }
+            }
+            console.log(total);
+        </script>
+    </head>
+    <body>
+        <h1>All concept in console</h1>
+    </body>
+</html>
