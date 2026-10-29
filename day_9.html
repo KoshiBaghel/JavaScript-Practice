@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+        
+        <h1 id="title">I am learning Javascript DOM!</h1>
+        <button id="btn">Click to Change Massage</button>
+
+        <script type="text/Javascript" >  
+            let heading = document.getElementById("title");            
+            let button = document.getElementById("btn");
+            
+                button.addEventListener("click", function() {
+                    heading.textContent = "I completed my HTML and CSS language!";
+                });
+        </script>
+    </body>
+</html>
