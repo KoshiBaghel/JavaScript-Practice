@@ -6,17 +6,20 @@
         </title>
     </head>
     <body>
-        <h1>My Learning Journey</h1>
-        <p id="para">I am learning HTML.</p>
+        <h1 id="heading">My Learning Journey Started.</h1>
+        <p id="para">I am learning JavaScript.</p>
         <button id="my_btn">Change Text</button>
 
         <script type="text/Javascript">
+            let heading = document.getElementById('heading');
             let paragraph = document.getElementById('para');
             let button = document.getElementById('my_btn');
 
             button.addEventListener("click", function(){
-                paragraph.textContent = "I have completed HTML and CSS. Now I am learning JavaScript!";
-                paragraph.style.color = "red";
+                heading.textContent = "My Learning Journey Started with JavaScript DOM!";
+                heading.style.backgroundColor = "yellow";
+                paragraph.style.color = "blue";
+                button.textContent = "Complete!";
             });
         </script>
     </body>
