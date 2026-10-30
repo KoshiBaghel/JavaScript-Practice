@@ -10,19 +10,45 @@
         <p id="para">I am learning JavaScript.</p>
         <button id="my_btn">Change Text</button>
 
+        <div id="box"></div>
+        <button id="btn">Add Content</button>
+
+        <div id="paragraph"></div>
+        <button id="para_btn">Repeat Paragraph</button>
+
         <script type="text/Javascript">
             let heading = document.getElementById('heading');
             let paragraph = document.getElementById('para');
             let button = document.getElementById('my_btn');
 
+            let box = document.getElementById("box");
+            let btn = document.getElementById('btn');
+
+            let paragraphLine = document.getElementById('paragraph');
+            let paragraphButton = document.getElementById('para_btn');
+
             button.addEventListener("click", function(){
-                heading.textContent = "My Learning Journey Started with JavaScript DOM!";
+                heading.innerHTML= "My Learning Journey Started with JavaScript DOM!";
                 heading.style.backgroundColor = "yellow";
                 heading.style.fontSize = "40px";
                 paragraph.style.backgroundColor = "lightblue";
                 button.textContent = "Complete!";
                 button.style.borderRadius = " 10px";
-            });
+            }); 
+
+            btn.addEventListener("click", function(){
+                box.innerHTML = `
+                            <h2>My Skills</h2>
+                            <p>HTML , CSS , Javascript , Python</p>
+                            <b>Frontend Developer</b>
+                        `;
+            }); 
+            
+            paragraphButton.addEventListener("click", function(){
+                paragraphLine.innerHTML += `
+                                    <p>I am learning JavaScript DOM.</p>
+                                    `;
+                });
         </script>
     </body>
 </html>
