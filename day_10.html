@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+        <h1>My Learning Journey</h1>
+        <p id="para">I am learning HTML.</p>
+        <button id="my_btn">Change Text</button>
+
+        <script type="text/Javascript">
+            let paragraph = document.getElementById('para');
+            let button = document.getElementById('my_btn');
+
+            button.addEventListener("click", function(){
+                paragraph.textContent = "I have completed HTML and CSS. Now I am learning JavaScript!";
+                paragraph.style.color = "red";
+            });
+        </script>
+    </body>
+</html>
