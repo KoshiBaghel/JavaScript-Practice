@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+        <input type="text" id="color" placeholder="Enter your favourite color">
+        <button id="btn">Submit</button>
+        <h2 id="result"></h2>
+
+        <script>
+            let nameInput = document.getElementById("color");
+            let button = document.getElementById("btn");
+            let result = document.getElementById("result");
+
+            button.addEventListener("click", function() {
+            result.textContent = "Your favourite color is " + nameInput.value;
+            });
+        </script>
+    </body>
+</html>
