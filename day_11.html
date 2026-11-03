@@ -9,14 +9,22 @@
         <div id="container"></div>
         <button id="btn">Add Paragraph</button>
 
+        <p id="message">Removed Paragraph</p>
+        <button id="dl_btn">Delete Paragraph</button>
+
         <script>
             let box = document.getElementById("container");
             let button = document.getElementById("btn");
+            let paragraph = document.getElementById("message");
+            let deleteButton = document.getElementById("dl_btn");
 
             button.addEventListener("click", function(){
                 let paragraph = document.createElement("p");
                 paragraph.textContent = "I am learning DOM";
                 box.appendChild(paragraph);
+            });  
+            deleteButton.addEventListener("click", function(){
+                paragraph.remove();
             });            
         </script>
     </body>
