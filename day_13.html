@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+    
+        <script>
+            let paragraph = document.createElement("p");
+            let button = document.createElement("button");
+
+            paragraph.textContent = "Hello DOM!";
+            button.textContent = "Remove";
+
+            document.body.appendChild(paragraph);
+            document.body.appendChild(button);
+
+            button.addEventListener("click", function(){
+                paragraph.remove();
+            });
+        </script>
+    </body>
+</html>
