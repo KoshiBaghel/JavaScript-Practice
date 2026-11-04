@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+        <div id="container">Try This Button!</div>
+        <button id="btn">Add Paragraph</button>
+        <button id="remove">Remove Last Paragraph</button>
+
+        <script>
+            let heading = document.getElementById("container");
+            let button = document.getElementById("btn");
+            let removeButton = document.getElementById("remove");
+
+            button.addEventListener("click", function(){
+                let paragraph = document.createElement("p");
+                paragraph.textContent = "I am learning JavaScript DOM";
+                heading.appendChild(paragraph);
+            });
+            removeButton.addEventListener("click", function(){
+                let lastParagraph = container.lastElementChild;
+                if(lastParagraph){
+                    lastParagraph.remove();
+                }
+            });
+        </script>
+    </body>
+</html>
