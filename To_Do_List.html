@@ -21,8 +21,16 @@
                     task.textContent = taskText;
                     list.appendChild(task);
                     input.value = "";
-                }
-            });
+
+                    let deleteBtn = document.createElement("button");
+                    deleteBtn.textContent = "Delete";
+                    task.appendChild(deleteBtn);
+
+                    deleteBtn.addEventListener("click", function(){
+                        task.remove();            
+                    });
+                }            
+            });   
         </script>
 </body>
 </html>
