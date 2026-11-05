@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Target
+        </title>
+    </head>
+    <body>
+        <button id="btn">Red</button>
+        <button id="btn">Blue</button>
+        <button id="btn">Green</button>
+
+        <script>         
+            document.addEventListener("click", function(event) {  
+                event.target.textContent = "Clicked!";
+            });
+        </script>
+    </body>
+</html>
