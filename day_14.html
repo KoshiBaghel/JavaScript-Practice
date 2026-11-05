@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Document Object Model
+        </title>
+    </head>
+    <body>
+        <input id="name" type="text">
+        <p id="line">Typing</p>
+
+        <script>
+            let input = document.getElementById("name");
+            let paragraph = document.getElementById("line");
+    
+            input.addEventListener("input", function() {
+                paragraph.textContent = "Your typing is = " + input.value;
+            });
+        </script>
+    </body>
+</html>
