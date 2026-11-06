@@ -6,17 +6,15 @@
         </title>
     </head>
     <body>
-        <button id="a-btn" class="fruit">Apple</button>
-        <button id="m-btn">Mango</button>
-        <button id="o-btn">Orange</button>
+        <button id="btn">Red</button>
+        <button id="btn">Blue</button>
+        <button id="btn">Green</button>
 
         <script>         
-            document.addEventListener("click", function(event) {  
-                console.log(event.target);
-                console.log(event.target.id);
-                console.log(event.target.textContent);
-                console.log(event.target.className);
-                console.log(event.target.tagName);
+            document.addEventListener("click", function(event) { 
+                console.log(event.target.textContent); 
+                event.target.textContent = "Clicked!";
+                event.target.style.backgroundColor = "yellow";      
             });
         </script>
     </body>
