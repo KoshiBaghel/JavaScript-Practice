@@ -25,6 +25,7 @@
 
         child.addEventListener("click", function() {
             console.log("Child Clicked");
+            event.stopPropagation();
         });
     </script>   
 
