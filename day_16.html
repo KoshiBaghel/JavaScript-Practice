@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Target
+        </title>
+    </head>
+    <body>
+        <div id="grandparent">
+            <div id="parent">
+                <button id="child">Click Me</button>
+            </div>
+        </div>
+    <script>  
+        let grandparent = document.getElementById("grandparent");
+        let parent = document.getElementById("parent");
+        let child = document.getElementById("child");
+
+        grandparent.addEventListener("click", function() {
+            console.log("Grandparent Clicked");
+        });
+        parent.addEventListener("click", function() {
+            console.log("Parent Clicked");
+        });
+
+        child.addEventListener("click", function() {
+            console.log("Child Clicked");
+        });
+    </script>   
+
+    </body>
+</html>
