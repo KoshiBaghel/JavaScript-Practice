@@ -6,16 +6,18 @@
         </title>
     </head>
     <body>
-        <button id="btn">Red</button>
-        <button id="btn">Blue</button>
-        <button id="btn">Green</button>
-
-        <script>         
-            document.addEventListener("click", function(event) { 
-                console.log(event.target.textContent); 
-                event.target.textContent = "Clicked!";
-                event.target.style.backgroundColor = "yellow";      
-            });
-        </script>
+        <div id="container">
+            <button id="one">One</button>
+            <button id="two">Two</button>
+            <button id="three">Three</button>
+        </div>
+    <script>  
+        let container = document.getElementById("container");       
+        container.addEventListener("click", function(event) { 
+            console.log(event.target.id); 
+            event.target.textContent = "Selected!";
+            console.log(event.currentTarget.id);      
+        });
+    </script>   
     </body>
 </html>
