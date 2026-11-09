@@ -9,19 +9,34 @@
         <form id="form">
             <h1>Sign Up</h1>
             First Name :
-            <input type="text" placeholder="Enter Your First Name"><br><br>
+            <input type="text" id="firstName" placeholder="Enter Your First Name"><br><br>
             Last Name :
-            <input type="text" placeholder="Enter Your Last Name"><br><br>
+            <input type="text" id="lastName" placeholder="Enter Your Last Name"><br><br>
             Email :
-            <input type="email" placeholder="Enter Your Email"><br><br>
+            <input type="email" id="email" placeholder="Enter Your Email"><br><br>
             <button type="submit">Submit</button>
         </form>
         <script>
-            let myform = document.getElementById('form');
-
+            let myform = document.getElementById("form");
             myform.addEventListener("submit", function(event){
                 event.preventDefault();
-                console.log("Form Submitted Successfully");
+               
+                let firstName = document.getElementById("firstName").value;
+                let lastName = document.getElementById("lastName").value;
+                let email = document.getElementById("email").value;
+              
+                if (firstName === "") {
+                    console.log("Please fill Your First Name!");   
+                }
+                else if (lastName === "") {
+                    console.log("Please fill Your Last Name!");
+                }
+                else if (email === "") {
+                    console.log("Please fill Your Email!");
+                }
+                else {
+                    console.log("Form Submitted Successfully!");
+                }
             });
         </script>
     </body>
