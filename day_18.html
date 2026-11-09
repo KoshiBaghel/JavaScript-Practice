@@ -25,11 +25,11 @@
                 let lastName = document.getElementById("lastName").value;
                 let email = document.getElementById("email").value;
               
-                if (firstName === "") {
-                    console.log("Please fill Your First Name!");   
+                if (firstName.trim() === "") {
+                    console.log("Please fill Your First Name not Space!");   
                 }
-                else if (lastName === "") {
-                    console.log("Please fill Your Last Name!");
+                else if (lastName.trim() === "") {
+                    console.log("Please fill Your Last Name not Space!");
                 }
                 else if (email === "") {
                     console.log("Please fill Your Email!");
