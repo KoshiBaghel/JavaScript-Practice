@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ketboard Event
+        </title>
+    </head>
+    <body>
+        <input id="text" type="text" placeholder="Type Something">
+        <script>
+            let text = document.getElementById("text");
+
+            text.addEventListener('keydown', function(event){
+                console.log("Key is Pressed.");
+            });
+            text.addEventListener('keyup', function(event){
+                console.log("Key is Released.");
+            });
+        </script>
+    </body>
+</html>
