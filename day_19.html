@@ -9,12 +9,9 @@
         <input id="text" type="text" placeholder="Type Something">
         <script>
             let text = document.getElementById("text");
-
             text.addEventListener('keydown', function(event){
-                console.log("Key is Pressed.");
-            });
-            text.addEventListener('keyup', function(event){
-                console.log("Key is Released.");
+                console.log("Pressed Key is = ",event.key);
+                console.log("Physical Key of keyboard = ",event.code);
             });
         </script>
     </body>
