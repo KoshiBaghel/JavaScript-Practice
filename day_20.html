@@ -4,12 +4,42 @@
         <title>
             Windows Event
         </title>
+        <style>
+            .box{
+                min-height: 2000px;
+            }
+        </style>
     </head>
     <body>
+        <div class="box">
+            <h1>JavaScript Scroll Event</h1>
+            <p>This is paragraph 1.</p>
+            <p>This is paragraph 2.</p>
+            <p>This is paragraph 3.</p>
+            <p>This is paragraph 4.</p>
+            <p>This is paragraph 5.</p>
+            <p>This is paragraph 6.</p>
+            <p>This is paragraph 7.</p>
+            <p>This is paragraph 8.</p>
+            <p>This is paragraph 9.</p>
+            <p>This is paragraph 10.</p>
+        </div>
         <script>
             window.addEventListener("resize", function(){
                 console.log("Window Resized!");
                 console.log(window.innerWidth);               
+            });
+            window.addEventListener("scroll", function(){
+                console.log("Page Scrolling...");                 
+            });
+            window.addEventListener("load", function(){
+                console.log("Website Fully Loaded!");               
+            });
+            window.addEventListener("focus", function(){
+                console.log("Window is Active!");               
+            });
+            window.addEventListener("blur", function(){
+                console.log("Window is inactive!");               
             });
         </script>
     </body>
