@@ -36,9 +36,11 @@
 
         <script>
             let progress = document.getElementById('progress');
-            
+
             window.addEventListener("scroll", function(){
-                let scrollPercent = (window.scrollY * 100) / (document.documentElement.scrollHeight - window.innerHeight); 
+                let scrollPercent = Math.round(
+                (window.scrollY * 100) /
+                (document.documentElement.scrollHeight - window.innerHeight)); 
                 progress.style.width =  scrollPercent + "%";
             });
         </script>
