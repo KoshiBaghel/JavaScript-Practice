@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Internet Connection Status
+        </title>
+    </head>
+    <body>
+        <h1>Internet Status</h1>
+        <h3 id="para">Checking Connection...</h3>
+        <script>
+            let paragraph = document.getElementById("para");
+            window.addEventListener("online", function(){
+                paragraph.textContent = "Hurray! Internet is connected.";
+                paragraph.style.color = "green";
+            });
+            window.addEventListener("offline", function(){
+                paragraph.textContent = "Oops! Internet is disconnected.";
+                paragraph.style.color = "red";
+            });
+        </script>
+    </body>
+</html>
