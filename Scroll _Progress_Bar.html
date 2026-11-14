@@ -18,14 +18,19 @@
             #progress{
                 width: 0%;
                 height: 20px;
+                transition: width 0.3s ease;
                 background-color: rgb(248, 10, 10);
+            }
+            #percentage{
+                color: white;
             }
         </style>
     </head>
     <body>
         <div id="progressBar">
             <div id="progress">
-            </div>
+                <span id="percentage">0%</span>
+            </div>    
         </div>
             <h1>JavaScript Scroll Event</h1>
             <p>This is paragraph 1.</p>
@@ -36,12 +41,14 @@
 
         <script>
             let progress = document.getElementById('progress');
+            let percentage = document.getElementById("percentage");
 
             window.addEventListener("scroll", function(){
                 let scrollPercent = Math.round(
                 (window.scrollY * 100) /
                 (document.documentElement.scrollHeight - window.innerHeight)); 
                 progress.style.width =  scrollPercent + "%";
+                percentage.textContent = scrollPercent + "%";
             });
         </script>
     </body>
