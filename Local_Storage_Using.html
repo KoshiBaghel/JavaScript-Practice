@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Local Storage Example
+        </title>
+    </head>
+    <body>
+        <input id="text" type="text" placeholder="Enter Your Name"><br><br>
+        <button id="save">Save Name</button>
+        <button id="show">Show Name</button>
+        <button id="delete">Delete Name</button>
+
+        <script>
+            let input = document.getElementById("text");
+            let saveName = document.getElementById("save");
+            let showName = document.getElementById("show");
+            let deleteName = document.getElementById("delete");
+
+            saveName.addEventListener("click", function(){
+                let nameText = input.value;
+                localStorage.setItem("name" , nameText);
+                input.value = "";
+            });
+            showName.addEventListener("click", function(){
+                console.log(localStorage.getItem("name"));
+            });
+            deleteName.addEventListener("click", function(){
+                console.log(localStorage.removeItem("name"));
+            });
+        </script>
+    </body>
+</html>
