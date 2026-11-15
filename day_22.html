@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Local Storage 
+        </title>
+    </head>
+    <body>
+        <script>
+            localStorage.setItem("course", "JavaScript");
+            console.log(localStorage.getItem("course"));
+
+            localStorage.setItem("age", 19);
+            let age = localStorage.getItem("age");
+            console.log(age, typeof age);
+
+            let skills = ["HTML", "CSS", "JavaScript"];
+            localStorage.setItem("mySkills", JSON.stringify(skills));
+            let result = localStorage.getItem("mySkills");
+            console.log(result);
+            console.log(typeof result);
+            console.log(Array.isArray(result));
+
+            let resultConvert = JSON.parse(localStorage.getItem("mySkills"));
+            console.log(typeof resultConvert);
+            console.log(Array.isArray(resultConvert));
+            
+            let marks = [75, 85, 90, 65];
+            localStorage.setItem("marks", JSON.stringify(marks));
+            let resultMarks = JSON.parse(localStorage.getItem("marks"));
+            let total = 0;
+            for(let i=0; i < resultMarks.length; i++){
+                total = total + resultMarks[i];
+            } 
+            console.log("Total Marks = ",total);
+            console.log("Avarage = ",total/resultMarks.length);
+        </script>
+    </body>
+</html>
