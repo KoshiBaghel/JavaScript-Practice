@@ -13,9 +13,12 @@
                 return response.json();
             })
             .then(function(data) {
-                console.log(data[0].name);
-                console.log(data[0].email);
-            });         
+                for(let i = 0; i < data.length; i++) {
+                    console.log(data[i].name);
+                    console.log(data[i].email);
+                    console.log(" ");
+            }
+            });       
         </script>
     </body>
 </html>
