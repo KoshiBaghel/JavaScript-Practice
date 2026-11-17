@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            API Display in page 
+        </title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            #userlist{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .userCard {
+                border: 1px solid gray;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                background-color: whitesmoke;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Users Details</h1>
+        <div id="userlist"></div>
+        <script>
+            let userList = document.getElementById("userlist");
+            function show(userName) {
+                console.log(userName);
+                alert(userName);
+            }
+            fetch("https://jsonplaceholder.typicode.com/users")
+           
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                for(let i = 0; i < data.length; i++){
+                    userList.innerHTML += `
+                    <div class="userCard">
+                        <h3>${data[i].name}</h3>
+                        <h4>${data[i].email}</h4>
+                        <h5>${data[i].address.city}</h5>
+                        <button onclick="show('${data[i].name}')">
+                            View Details
+                        </button>
+                    </div>`;
+                }   
+            });       
+        </script>
+    </body>
+</html>
