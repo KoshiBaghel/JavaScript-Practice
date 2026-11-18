@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            API Example
+        </title>
+    </head>
+    <body>
+        <h1>User Information</h1>
+        <button id="btn">Load Users</button>
+        <p id="message">Message</p>
+        <div id="userlist"></div>
+
+        <script>
+            let button = document.getElementById("btn");
+            let userMsg = document.getElementById("message");
+            let userList = document.getElementById("userlist");
+
+            button.addEventListener("click" , function(){
+               async function getUsers(){
+                try{
+                    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+                        if (!response.ok){
+                            throw new Error("API request failed");
+                        }
+                    let data = await response.json();
+                    console.log(data);
+                }
+                catch(error){
+                    console.log(error.message);
+                }
+            }
+            getUsers();
+            });
+        </script>
+    </body>
+</html>
