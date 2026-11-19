@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Array Method 
+        </title>
+    </head>
+    <body>
+        <script>
+
+        // Filter () se even number nikalna - 
+            let numbers = [12, 7, 9, 20, 15, 18, 3, 10];
+            let result1 = numbers.filter(function(even){
+                return even % 2 == 0;
+            });
+            console.log(result1);
+
+        // 33 or above marks are selected - 
+            let marks = [25, 80, 32, 45, 90, 18, 67];
+            let result2 = marks.filter(function(num){
+                return num >= 33;
+            });
+            console.log(result2);
+        
+        // Starting name letter "A" -
+            let names = ["Aman", "Riya", "Ankit", "Kiran", "Anjali", "Rahul"];
+            let result3 = names.filter(function(name){
+                return name.startsWith("A");
+            });
+            console.log(result3);
+
+        // Includes - 
+            let name = "JavaScript";
+            console.log(name.includes("cri"));
+            console.log(name.includes("Python"));
+
+            let fruits = ["Apple", "Mango", "Banana", "Orange"];
+            let result4 = fruits.includes("Mango");
+            console.log(result4);
+
+        // Lower case -
+            let nam = ["Rahul", "Rohan", "Riya", "Mohit", "Rohit"];
+            let result = nam.filter(function(name) {
+                return name.toLowerCase().includes("ro");
+            });
+            console.log(result);
+        </script>
+    </body>
+</html>
