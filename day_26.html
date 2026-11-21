@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Drag and Drop
+        </title>
+        <style>
+            #task {
+                background-color: lightblue;
+                padding: 20px;
+                width: 180px;
+                margin: 20px;
+                cursor: grab;
+            }
+            .box {
+                width: 250px;
+                height: 120px;
+                border: 2px dashed gray;
+                margin: 20px;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div draggable="true" id="task">
+            Learn JavaScript
+        </div>
+        <div id="box1" class="box">
+            Pending
+        </div>
+        <div id="box2" class="box">
+            In Progress
+        </div>
+        <div id="box3" class="box">
+            Completed
+        </div>
+        <script>
+            let task = document.getElementById("task");
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+            let box3 = document.getElementById("box3");
+
+            // Drag start
+            task.addEventListener("dragstart", function(){
+                console.log("Start Task Trag.");
+            });
+
+            // Drop allow karna
+            box1.addEventListener("dragover", function(event){
+                event.preventDefault();
+            });
+            box2.addEventListener("dragover", function(event){
+                event.preventDefault();
+            });
+            box3.addEventListener("dragover", function(event){
+                event.preventDefault();
+            });
+
+            // Drop karna
+            box1.addEventListener("drop", function(event){
+                event.preventDefault();
+                box1.appendChild(task);
+            });
+            box2.addEventListener("drop", function(event){
+                event.preventDefault();
+                box2.appendChild(task);
+            });
+            box3.addEventListener("drop", function(event){
+                event.preventDefault();
+                box3.appendChild(task);
+            });
+
+            // Drag end
+            task.addEventListener("dragend", function(){
+                console.log("Drag completed.");
+            });
+        </script>
+    </body>
+</html>
